@@ -1,6 +1,8 @@
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #fff;
+    color: #000;
     margin: 0;
     padding: 0;
     display: flex;
@@ -8,46 +10,74 @@ body {
     align-items: center;
     height: 100vh;
 }
+
 .container {
     background-color: #fff;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #000;
     border-radius: 10px;
     width: 90%;
     max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
 }
-h1 {
-    color: #333;
+
+h1, h2 {
     text-align: center;
+    color: #000;
 }
+
 h2 {
-    color: #555;
+    margin-top: 30px;
 }
-ul {
-    list-style: none;
-    padding: 0;
-}
-li {
-    background-color: #f9f9f9;
-    margin: 10px 0;
-    padding: 10px;
-    border-left: 4px solid #0073e6;
-}
+
+/* Skills Section */
 .skills {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    justify-content: center;
 }
+
 .skill {
-    background-color: #0073e6;
+    background-color: #000;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 14px;
+    transition: background-color 0.3s ease;
 }
-footer {
+
+.skill:hover {
+    background-color: #444;
+}
+
+/* DevOps Tools List */
+ul {
+    list-style: none;
+    padding: 0;
     margin-top: 20px;
-    text-align: center;
-    font-size: 14px;
-    color: #888;
 }
+
+li {
+    background-color: #f9f9f9;
+    margin: 10px 0;
+    padding: 10px;
+    border-left: 4px solid #000;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+li:hover {
+    background-color: #e0e0e0;
+    border-left-color: #333;
+}
+
+/* Education Section */
+.education-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.education
