@@ -1,156 +1,227 @@
-/* General Styling */
+/* Body and General Styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #fff;
-    color: #000;
+    background-color: white;
+    color: black;
     margin: 0;
-    padding: 20px;  /* Added padding to prevent content from hitting the screen edges */
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Nav Styling */
+nav ul {
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Allow content to scroll vertically */
+    list-style: none;
+    padding: 0;
+    gap: 20px;
 }
 
-.container {
-    background-color: #fff;
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* Section Styling */
+section {
+    margin: 50px auto;
+    max-width: 800px;
     padding: 20px;
-    border: 1px solid #000;
-    border-radius: 10px;
-    width: 100%;  /* Make the container responsive */
-    max-width: 900px;  /* Limit width on large screens */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
 }
 
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-.header-content {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.header-content i {
-    font-size: 36px;  /* Larger icon */
-    color: #000;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 24px;
-}
-
-.intro {
+h2 {
     text-align: center;
-    font-size: 18px;
-    color: #333;
-    margin-top: 10px;
 }
 
-/* Skills Section */
+/* Skill Section */
 .skills {
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    margin-bottom: 20px;
 }
 
 .skill {
-    background-color: #000;
+    background-color: black;
     color: white;
-    padding: 10px 20px;
+    padding: 10px;
     border-radius: 5px;
-    font-size: 14px;
-    transition: background-color 0.3s ease;
+    margin: 5px;
 }
 
-.skill:hover {
-    background-color: #444;
-}
-
-/* DevOps Tools List */
-ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-li {
-    background-color: #f9f9f9;
-    margin: 10px 0;
-    padding: 10px;
-    border-left: 4px solid #000;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-li:hover {
-    background-color: #e0e0e0;
-    border-left-color: #333;
-}
-
-/* Education Section */
-.education-item {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-    font-size: 16px;
-}
-
-.education-item i {
-    font-size: 24px;
+/* Experience Section */
+.icon {
     margin-right: 10px;
 }
 
-/* Job Section with Cool Effect */
-.job-item {
+/* Contact Section (Social Icons) */
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-links a {
     display: flex;
     align-items: center;
-    margin: 10px 0;
-    font-size: 16px;
-    background-color: #f0f0f0;
-    padding: 10px;
-    border-left: 4px solid #000;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-decoration: none;
+    color: black;
+    transition: transform 0.3s ease;
 }
 
-.job-item i {
-    font-size: 24px;
+.contact-links a img {
     margin-right: 10px;
+    transition: transform 0.3s ease;
 }
 
-.job-item:hover {
-    transform: translateX(10px);
-    background-color: #e0e0e0;
+.contact-links a:hover img {
+    transform: scale(1.2);
 }
 
-/* Social Icons Styling */
-.social-icons {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.social-icons a {
-    color: #000;
-    font-size: 50px;
-    margin: 0 20px;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.social-icons a:hover {
-    color: #666;
+.contact-links a:hover {
     transform: scale(1.1);
 }
 
-/* Footer Styling */
-footer {
-    margin-top: 40px;
-    text-align: center;
-    font-size: 14px;
-    color: #888;
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    transition: opacity 0.3s ease;
 }
+
+#back-to-top.show {
+    display: block;
+    opacity: 1;
+}
+
+/* Fade In & Slide In Animation */
+.fade-in, .slide-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.slide-in.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Loading Spinner */
+#loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: white;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid black;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-links a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    transition: transform 0.3s ease;
+}
+
+.contact-links a i {
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.contact-links a:hover i {
+    transform: scale(1.2);
+}
+
+.contact-links a:hover {
+    transform: scale(1.1);
+}
+
+/* Skill Section */
+.skills-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.skill-item {
+    text-align: center;
+    position: relative;
+}
+
+.skill-item i {
+    font-size: 40px;
+    color: #0073e6;
+    margin-bottom: 10px;
+}
+
+.circular-chart {
+    width: 100px;
+    height: 100px;
+    transform: rotate(-90deg);
+    margin-bottom: 10px;
+}
+
+.circle-bg {
+    fill: none;
+    stroke: #e6e6e6;
+    stroke-width: 3.8;
+}
+
+.circle {
+    fill: none;
+    stroke-width: 2.8;
+    stroke-linecap: round;
+    animation: progress 1s ease-out forwards;
+    stroke: #0073e6; /* Color of the progress circle */
+}
+
+@keyframes progress {
+    0% {
+        stroke-dasharray: 0, 100;
+    }
+}
+
+.skill-item span {
+    font-size: 14px;
+    color: #333;
+}
+

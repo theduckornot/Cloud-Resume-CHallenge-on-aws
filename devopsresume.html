@@ -5,83 +5,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Cloud Resume Challenge - DevOps</title>
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Ruben Silva - Cloud Resume</title>
+    <link rel="icon" href="path-to-devops-icon.png"> <!-- Icon for the site -->
+
+    <!-- FontAwesome CDN for social icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <!-- Header Section -->
-        <header>
-            <div class="header-content">
-                <i class="fas fa-cogs"></i> <!-- DevOps Icon -->
-                <h1>Cloud Resume Challenge</h1>
-            </div>
-            <p class="intro">Hello, I'm Ruben Silva. Welcome to my DevOps resume.</p>
-        </header>
 
-        <h2>Objectives</h2>
-        <p>
-            I am a passionate learner of DevOps, working towards improving cloud infrastructure, automation, and CI/CD processes. My goal is to develop highly scalable and resilient systems using industry best practices and land a DevOps job.
-        </p>
-
-        <h2>Skills</h2>
-        <div class="skills">
-            <span class="skill">AWS</span>
-            <span class="skill">Azure</span>
-            <span class="skill">CI/CD (Jenkins, GitHub Actions)</span>
-            <span class="skill">Docker & Kubernetes</span>
-            <span class="skill">Terraform</span>
-            <span class="skill">Ansible</span>
-            <span class="skill">Linux Administration</span>
-            <span class="skill">Python</span>
-            <span class="skill">Monitoring & Logging (Prometheus, Grafana)</span>
-        </div>
-
-        <h2>DevOps Tools & Technologies</h2>
-        <ul>
-            <li>Cloud Platforms: AWS, Azure, Google Cloud</li>
-            <li>Automation: Terraform, Ansible, CloudFormation</li>
-            <li>CI/CD: Jenkins, GitHub Actions, CircleCI</li>
-            <li>Containerization: Docker, Kubernetes, Helm</li>
-            <li>Monitoring & Logging: Prometheus, Grafana, ELK Stack</li>
-        </ul>
-
-        <h2>Education</h2>
-        <!-- College Degree -->
-        <div class="education-item">
-            <i class="fas fa-graduation-cap"></i>
-            <span>Computer Science - ISTEC (Instituto Superior de Tecnologias Avançadas)</span>
-        </div>
-
-        <!-- High School -->
-        <div class="education-item">
-            <i class="fas fa-school"></i>
-            <span>12º in Computer: IT Systems Management and Programming Technician</span>
-        </div>
-
-        <h2>Current Job</h2>
-        <!-- System Analyst -->
-        <div class="job-item">
-            <i class="fas fa-desktop"></i>
-            <span>System Analyst (2022 - Present)</span>
-        </div>
-
-        <!-- Call Center Assistant -->
-        <div class="job-item">
-            <i class="fas fa-phone"></i>
-            <span>Call Center Assistant - EDP (2017 - 2022)</span>
-        </div>
-
-        <h2>Socials</h2>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://www.github.com" target="_blank"><i class="fab fa-github"></i></a>
-        </div>
-
-        <footer>
-            <p>Created as part of the Cloud Resume Challenge | 2024 <a href="https://cloudresumechallenge.dev/">CloudResumeChallenge</a></p>
-        </footer>
+    <!-- Loading Spinner -->
+    <div id="loading">
+        <div class="spinner"></div>
     </div>
+
+    <header>
+        <div class="counter-number nav-item nav-link text-white-50 font-os font-size-16 active">Couldn't
+            read the counter</div>
+        <h1>Ruben Silva</h1>
+        <p>DevOps Enthusiast</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="skills" class="slide-in">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-item">
+                <svg class="circular-chart" viewBox="0 0 36 36">
+                    <path class="circle-bg" d="M18 2.0845a 15.9155 15.9155 0 0 1 0 31.831 15.9155 15.9155 0 0 1 0-31.831"/>
+                    <path class="circle" stroke-dasharray="60, 100" d="M18 2.0845a 15.9155 15.9155 0 0 1 0 31.831 15.9155 15.9155 0 0 1 0-31.831"/>
+                </svg>
+                <i class="fab fa-aws"></i>
+                <span>AWS</span>
+            </div>
+            <div class="skill-item">
+                <svg class="circular-chart" viewBox="0 0 36 36">
+                    <path class="circle-bg" d="M18 2.0845a 15.9155 15.9155 0 0 1 0 31.831 15.9155 15.9155 0 0 1 0-31.831"/>
+                    <path class="circle" stroke-dasharray="50, 100" d="M18 2.0845a 15.9155 15.9155 0 0 1 0 31.831 15.9155 15.9155 0 0 1 0-31.831"/>
+                </svg>
+                <i class="fab fa-microsoft"></i>
+                <span>Azure</span>
+            </div>
+            <div class="skill-item">
+                <svg class="circular-chart" viewBox="0 0 36 36">
+                    <path class="circle-bg" d="M18 2.0845a 15.9155 15.9155 0 0 1 0 31.831 15.9155 15.9155 0 0 1 0-31.831"/>
+                    <path class="circle" stroke-dasharray="55, 100" d="M18 2.0845a 15.9155 15.9155 0 0 1 0 31.831 15.9155 15.9155 0 0 1 0-31.831"/>
+                </svg>
+                <i class="fab fa-github"></i>
+                <span>CI/CD (Jenkins, GitHub Actions)</span>
+            </div>
+            <div class="skill-item">
+                <svg class="circular-chart" viewBox="0 0 36 36">
+                    <path class="circle-bg" d="M18 2.0845a 15.9155 15.9155 0 0 1 0 31.831 15.9155 15.9155 0 0 1 0-31.831"/>
+                    <path class="circle" stroke-dasharray="40, 100" d="M18 2.0845a 15.9155 15.9155 0 0 1 0 31.831 15.9155 15.9155 0 0 1 0-31.831"/>
+                </svg>
+                <i class="fab fa-docker"></i>
+                <span>Docker & Kubernetes</span>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="experience" class="slide-in">
+        <h2>Experience</h2>
+        <p><span class="icon">&#128187;</span> System Analyst (2022 - Today)</p>
+        <p><span class="icon">&#128222;</span> Call Center Assistant, EDP (2017 - 2022)</p>
+    </section>
+
+    <section id="education" class="slide-in">
+        <h2>Education</h2>
+        <p><span class="icon">&#127891;</span> Degree in Computer Science, ISTEC</p>
+        <p><span class="icon">&#127891;</span> IT Systems Management & Programming Technician, 12th Grade</p>
+    </section>
+
+    <section id="contact" class="slide-in">
+        <h2>Contact</h2>
+        <div class="contact-links">
+            <!-- LinkedIn Icon from FontAwesome -->
+            <a href="https://linkedin.com" class="social-icon" target="_blank">
+                <i class="fab fa-linkedin" style="font-size: 40px;"></i>
+                <span>LinkedIn</span>
+            </a>
+            <!-- GitHub Icon from FontAwesome -->
+            <a href="https://github.com" class="social-icon" target="_blank">
+                <i class="fab fa-github" style="font-size: 40px;"></i>
+                <span>GitHub</span>
+            </a>
+        </div>
+    </section>
+
+    <a href="#" id="back-to-top" class="back-to-top">↑ Back to Top</a>
+
+    <!-- JavaScript file -->
+    <script src="scripts.js"></script>
 </body>
 </html>
